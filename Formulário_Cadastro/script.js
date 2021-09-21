@@ -24,10 +24,9 @@ function initMultipleFieldSet(fs){
         deleteButton.textContent = "Excluir";
         deleteButton.type = "button";
 
-
         div.appendChild(newInput)
         div.appendChild(deleteButton)
-
+       
         deleteButton.addEventListener("click", function(){
             div.remove();
         })

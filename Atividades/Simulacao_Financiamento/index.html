@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulação</title>
+    <link rel="stylesheet" href="style.css">
+    </link>
+</head>
+<body>
+    <div class="simulacao">
+        <h2>SIMULAÇÃO DE FINANCIAMENTO</h2>
+        <label>Valor: </label>
+        <div><input type="number" step="any" name="valor" id="valor" value="200000"></div>
+        <label>Prazo (anos): </label>
+        <div><input type="number" name="prazo" id="prazo" value="20"></div>
+        <label>Juros ao ano: </label>
+        <div><input type="number" name="jurosanos" step=".01" id="juros" value="0.08"></div>
+        <button type='button' onclick="simulaFinanciamento()">SIMULAR</button>
+    </div>
+
+    <div class="resultado">
+        <h2>RESULTADO</h2>
+        <label for="valor">Prazo (meses): </label>
+        <div><input type="number" name="prazoMeses" id="prazoMeses"></div>
+        <label for="prazo">Juros ao mês: </label>
+        <div><input type="number" name="jurosMes" id="jurosMes"></div>
+        <label for="jurosanos">Juros acumulados: </label>
+        <div><input type="number" name="jurosAnos" id="jurosAnos"></div>
+    </div>
+
+    <table id='tabela'>
+        <tr class="coluna">
+            <td><label for="prestacao">Prestações</label></td>
+            <td><label for="amortizacao">Amortização</label></td>
+            <td><label for="juros">Juros</label></td>
+            <td><label for="total">Total</label></td>
+        </tr>
+    </table>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
