@@ -1,19 +1,76 @@
 *{
-    font-family: Arial, Helvetica, sans-serif;
-    color: black;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background-color: rgb(24, 24, 24);
+    text-align: left;
+    margin-top: 50px;
+    margin-right: 200px;
+    margin-left: 200px;
+    padding: 20px 70px 20px 70px;
+    border-radius: 15px;
+    border: 5px solid white;
+    color: rgb(255, 255, 255);
+}
+
+h1{
+    font-family:'Times New Roman', Times, serif;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+    color: orange;
 }
 
 button{
-    margin-top: 15px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    width: 208px;
+    background-color: rgb(22, 22, 22);
+    padding: 6px 15px 6px 15px;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+  background-color: rgb(223, 154, 26);
+  color: black;
+}
+
+fieldset{
+    margin-bottom: 30px;
 }
 
 label{
-    margin-bottom: 10px;
-    margin-right: 40px;
+    margin-bottom: 30px;
+}
+
+input{
+    margin-bottom: 15px;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+th{
+    border: 1px solid white;
+    text-align: center;
+    padding: 10px 20px 10px 20px;
+}
+
+tbody td{
+    padding: 15px;
 }
 
 #tabela{
-    border: 1px solid black;
-    margin-top: 20px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
 }
+
+
 

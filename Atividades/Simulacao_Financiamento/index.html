@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,38 +9,50 @@
     <link rel="stylesheet" href="style.css">
     </link>
 </head>
+
 <body>
-    <div class="simulacao">
-        <h2>SIMULAÇÃO DE FINANCIAMENTO</h2>
-        <label>Valor: </label>
-        <div><input type="number" step="any" name="valor" id="valor" value="200000"></div>
-        <label>Prazo (anos): </label>
-        <div><input type="number" name="prazo" id="prazo" value="20"></div>
-        <label>Juros ao ano: </label>
-        <div><input type="number" name="jurosanos" step=".01" id="juros" value="0.08"></div>
-        <button type='button' onclick="simulaFinanciamento()">SIMULAR</button>
-    </div>
+    <div class="fundo">
+        <div class="container">
+            <div class="simulacao">
+                <h1 style="text-align: center;">SIMULAÇÃO DE FINANCIAMENTO</h1>
+                <div>
+                    <label for="valor">Valor: </label>
+                    <div><input type="number" step="any" name="valor" id="valor" value="200000.00"></div>
+                </div>
 
-    <div class="resultado">
-        <h2>RESULTADO</h2>
-        <label for="valor">Prazo (meses): </label>
-        <div><input type="number" name="prazoMeses" id="prazoMeses"></div>
-        <label for="prazo">Juros ao mês: </label>
-        <div><input type="number" name="jurosMes" id="jurosMes"></div>
-        <label for="jurosanos">Juros acumulados: </label>
-        <div><input type="number" name="jurosAnos" id="jurosAnos"></div>
-    </div>
+                <div>
+                    <label for="prazo">Prazo (anos): </label>
+                    <div><input type="number" name="prazo" id="prazo" value="20"></div>
+                </div>
+                <label for="jurosanos">Juros ao ano: </label>
+                <div><input type="number" name="jurosanos" step=".01" id="juros" value="0.08"></div>
+                <button type='button' onclick="simulaFinanciamento()">SIMULAR</button>
+            </div>
 
-    <table id='tabela'>
-        <tr class="coluna">
-            <td><label for="prestacao">Prestações</label></td>
-            <td><label for="amortizacao">Amortização</label></td>
-            <td><label for="juros">Juros</label></td>
-            <td><label for="total">Total</label></td>
-        </tr>
-    </table>
+            <div class="resultado">
+                <h1 style="text-align: center;">RESULTADO</h1>
+                <label>Prazo (meses): </label>
+                <div><input type="number" name="prazoMeses" id="prazoMeses" readonly=“true”></div>
+                <label>Juros ao mês: </label>
+                <div><input type="number" name="jurosMes" id="jurosMes" readonly=“true”></div>
+                <label>Juros acumulados: </label>
+                <div><input type="number" name="jurosAcum" id="jurosAcum" readonly=“true”></div>
+            </div>
+
+            <table id='tabela'>
+                <tr>
+                    <th>Prestações</th>
+                    <th>Amortização</th>
+                    <th>Juros</th>
+                    <th>Total</th>
+                </tr>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
