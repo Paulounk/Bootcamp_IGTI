@@ -17,26 +17,29 @@
                 <h1 style="text-align: center;">SIMULAÇÃO DE FINANCIAMENTO</h1>
                 <div>
                     <label for="valor">Valor: </label>
-                    <div><input type="number" step="any" name="valor" id="valor" value="200000.00"></div>
+                    <div><input type="number" step="any" name="valor" id="valor" value="200000"></div>
                 </div>
 
                 <div>
                     <label for="prazo">Prazo (anos): </label>
                     <div><input type="number" name="prazo" id="prazo" value="20"></div>
                 </div>
-                <label for="jurosanos">Juros ao ano: </label>
-                <div><input type="number" name="jurosanos" step=".01" id="juros" value="0.08"></div>
+                <div>
+                    <label for="jurosanos">Juros ao ano: </label>
+                    <div><input type="number" name="jurosanos" step=".01" id="juros" value="0.08"></div>
+                </div>
+                
                 <button type='button' onclick="simulaFinanciamento()">SIMULAR</button>
             </div>
 
             <div class="resultado">
                 <h1 style="text-align: center;">RESULTADO</h1>
                 <label>Prazo (meses): </label>
-                <div><input type="number" name="prazoMeses" id="prazoMeses" readonly=“true”></div>
+                <div><input type="number" name="prazoMeses" id="prazoMeses" readonly></div>
                 <label>Juros ao mês: </label>
-                <div><input type="number" name="jurosMes" id="jurosMes" readonly=“true”></div>
+                <div><input type="number" name="jurosMes" id="jurosMes" readonly></div>
                 <label>Juros acumulados: </label>
-                <div><input type="number" name="jurosAcum" id="jurosAcum" readonly=“true”></div>
+                <div><input type="number" name="jurosAcum" id="jurosAcum" readonly></div>
             </div>
 
             <table id='tabela'>

@@ -1,6 +1,6 @@
-var valor = document.querySelector("#valor").value
-var prazo = document.querySelector("#prazo").value
-var juros = document.querySelector("#juros").valueAsNumber
+var valor = document.getElementById('valor')
+var prazo = document.querySelector("#prazo")
+var juros = document.querySelector("#juros")
 var prazoMeses = document.querySelector("#prazoMeses")
 var jurosMes = document.querySelector("#jurosMes")
 var jurosAcum = document.querySelector("#jurosAcum")
@@ -9,23 +9,27 @@ var jurosAcum = document.querySelector("#jurosAcum")
 function simulaFinanciamento() {
 
     //CALCULO DO PRAZO
-    prazoMeses.value = prazo * 12;
+    prazoMeses.value = prazo.value * 12;
     prazoMeses.innerHTML = prazoMeses.value;
 
     //CALCULO DO JUROS AO MÊS
-    jurosMes.value = ((1 + juros) ** (1 / 12) - 1);
+   
+    jurosMes.value = ((1 + juros.valueAsNumber) ** (1 / 12) - 1);
+    console.log(jurosMes.value)
     jurosMes.innerHTML = jurosMes.value;
-
+    
     //CALCULO DA AMORTIZAÇÃO
     var vAmortizacao = 0;
-    vAmortizacao = (valor/prazoMeses.value).toFixed(2);
+    vAmortizacao = (valor.value/prazoMeses.value).toFixed(2);
 
     var jAcumulados=0;
+    var resp = 0;
+
     for(let i = 0; i < prazoMeses.value; i++){
         //JUROS
-        let resp = 0;
-        resp = parseFloat(((valor - (i * vAmortizacao)) * jurosMes.value).toFixed(2));
-     
+        console.log(valor.value)
+        resp = parseFloat(((valor.value - (i * vAmortizacao)) * jurosMes.value).toFixed(2));
+        
         //TOTAL
         let vtotal = parseFloat(resp + parseFloat(vAmortizacao)).toFixed(2);
     
@@ -49,4 +53,6 @@ function simulaFinanciamento() {
     }  
     jurosAcum.value = jAcumulados.toFixed(2);
     jurosAcum.innerHTML = jAcumulados
+
+    
 }
